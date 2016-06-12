@@ -6,11 +6,14 @@ This is the core framework underpinning [Temply Web](https://github.com/mefernan
 
 ## Why bother
 
-There are just so many frameworks out there, right? So, why bother?
+There are just so many frameworks out there, right? 
+
+So, why bother?
 
 Well, there is this selfish personal satisfaction in doing something on your own, granted.
-Other than that, the fundamental approach in Temply is to preserve the original HTML template
-and move the code out to small, atomic units of JS code to transform it: let's call these _plugins_.
+
+Other than that, the fundamental approach in Temply is to **preserve the original HTML template**
+and **move the code out** to small, atomic units of JS code to transform it: let's call these _plugins_.
 
 ## What you get
 
@@ -41,3 +44,32 @@ Which will produce the following HTML result:
 </div>
 ```
 
+## What plugins do and how they work
+
+A plugin is just a JS file at the `plugins` folder that begins with `cms-`.
+
+It must export a function like so:
+
+```js
+module.exports = function(data, $element, callback) { ...
+```
+
+It gets 3 parameters:
+
+- `data`: An object with information the plugin might use to render something.
+- `$element`: The HTML element the plugin is invoked from. It is wrapped in a [Cheerio]() object to manipulate the HTML at will.
+- `callback`: Because async, right?. A plugin **must** call this function, passing `data` to the next plugin.
+
+### Data and Render plugins
+
+There are 2 categories of plugins: data and render. Both have the same structure, but it's nice to separate concerns.
+
+Data plugins will be devoted to getting information (databases, REST apis) and passing it along with `callback(data)`.
+
+Render plugins will tipically use `data` object passed by parameter and render it.
+
+### Plugins execution model
+
+Plugins are called [in-order](https://en.wikipedia.org/wiki/Tree_traversal#In-order), like in _HTML Tree Traversal_ in-order.
+
+The idea is that preceding `cms-data` plugins pass along valuable `data` to subsequent `cms-render` plugins. That's it.
