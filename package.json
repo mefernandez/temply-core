@@ -1,6 +1,6 @@
 {
   "name": "temply-core",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.4",
   "description": "A non-invasive, pure HTML templating framework",
   "main": "temply-core.js",
   "scripts": {
