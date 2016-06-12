@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '4.2.3'
+deploy:
+  provider: npm
+  email: mariano.fernandez@gmail.com
+  api_key:
+    secure: BBs0YVbqmCULh/2IFqLcdcMpYR0hu8eWfV1noCx5Zc111Uhsq0UOf36SvFkkvAvVrjb3WMuDM6k8MSQsoXSFT6DPfPTwOYqrz77d/FI1uM3OqJwzDb0XZZ4GfUj/iFiYoAWBzmi50lukskvRgd8xGXUtsWJxFmbg7shGrsR0Cec3k9cXMsa3qw9MriB+B6celDVFPl7A4Jkmg0rY3Naj/TRcocK+c2L6qvCFtcBD1Rgpt8dyKnoUI5vnTU3skVyHeXgU87SQqMWQCfWOl3X27u5n1of05KUFieS2Iq6M/DHxULN3dcbzi7BuA/HsnXrnnORDaaQ1vqeMrt43Ehu+DmaJdBrWDD3EzLPrjC6R3FmzY4gQ8VnH+QOlM7QSjNbNK8g4O/EeaYHmnEL5shJLKMtYWt3gRSk5K+irD6ZUnGrcRxEoQnOktBv393O6h/d4qIJmbduerjSuBtkc13KkDAZDRjWh0SooORskgvs51LWY/F1paKw1IXFjIbWxaNZCuMAIlSN8vpoQXmJHk+wa9hhphw+dwt+aa9XkEo+JqS+/P1yJwB0HI8fCdJkmsPgtAvGQXtcr5Q31eLfhzLcMUb0xk/qNTnA64jx+zI6eUitVf7GiYHHywWjgGvatKUpePZR2p0usPp+nKCSg6iDns6z0Sy2MxikdP669XrosmHA=
+  on:
+    tags: true
+    repo: mefernandez/temply-core
