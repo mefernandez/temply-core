@@ -1,0 +1,32 @@
+{
+  "name": "temply-core",
+  "version": "0.0.1",
+  "description": "A non-invasive, pure HTML templating framework",
+  "main": "temply-core.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mefernandez/temply-core.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "html",
+    "templating"
+  ],
+  "author": "mefernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mefernandez/temply-core/issues"
+  },
+  "homepage": "https://github.com/mefernandez/temply-core#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "lodash": "^3.10.1"
+  }}
