@@ -1,5 +1,9 @@
 # temply-core
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Travis Build][travis-image]][travis-url]
+
 A non-invasive, pure HTML templating framework.
 
 This is the core framework underpinning [Temply Web](https://github.com/mefernandez/temply).
@@ -80,7 +84,7 @@ The idea is that preceding `cms-data` plugins pass along valuable `data` to subs
 
 [npm-image]: https://img.shields.io/npm/v/temply-core.svg
 [npm-url]: https://npmjs.org/package/temply-core
-[travis-image]: https://img.shields.io/travis/mefernandez/temply-core/master.svg?label=linux
+[travis-image]: https://img.shields.io/travis/mefernandez/temply-core/master.svg
 [travis-url]: https://travis-ci.org/mefernandez/temply-core
 [downloads-image]: https://img.shields.io/npm/dm/temply-core.svg
 [downloads-url]: https://npmjs.org/package/temply-core
