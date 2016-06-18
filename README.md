@@ -10,13 +10,14 @@ This is the core framework underpinning [Temply Web](https://github.com/mefernan
 
 ## Why bother
 
-There are just so many frameworks out there, right? 
+There are just so many templating frameworks out there, right? 
 
 So, why bother?
 
-Well, there is this selfish personal satisfaction in doing something on your own, granted.
+Well, on the one hand it's all about "I'll do this my way" thing, granted.
+On the other hand, I missed a framework that just wouldn't mess with the HTML structure or syntax.
 
-Other than that, the fundamental approach in Temply is to **preserve the original HTML template**
+So, the fundamental approach to templating in Temply is to **preserve the original HTML template**
 and **move the code out** to small, atomic units of JS code to transform it: let's call these _plugins_.
 
 ## What you get
@@ -61,7 +62,7 @@ module.exports = function(data, $element, callback) { ...
 It gets 3 parameters:
 
 - `data`: An object with information the plugin might use to render something.
-- `$element`: The HTML element the plugin is invoked from. It is wrapped in a [Cheerio]() object to manipulate the HTML at will.
+- `$element`: The HTML element the plugin is invoked from. It is wrapped in a [Cheerio](http://cheeriojs.github.io/cheerio/) object to manipulate the HTML at will.
 - `callback`: Because async, right?. A plugin **must** call this function, passing `data` to the next plugin.
 
 ### Data and Render plugins
