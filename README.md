@@ -73,3 +73,14 @@ Render plugins will tipically use `data` object passed by parameter and render i
 Plugins are called [in-order](https://en.wikipedia.org/wiki/Tree_traversal#In-order), like in _HTML Tree Traversal_ in-order.
 
 The idea is that preceding `cms-data` plugins pass along valuable `data` to subsequent `cms-render` plugins. That's it.
+
+## License
+
+[MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/temply-core.svg
+[npm-url]: https://npmjs.org/package/temply-core
+[travis-image]: https://img.shields.io/travis/mefernandez/temply-core/master.svg?label=linux
+[travis-url]: https://travis-ci.org/mefernandez/temply-core
+[downloads-image]: https://img.shields.io/npm/dm/temply-core.svg
+[downloads-url]: https://npmjs.org/package/temply-core
