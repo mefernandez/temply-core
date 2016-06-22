@@ -1,6 +1,7 @@
 language: node_js
 node_js:
 - 4.2.3
+script: npm run-script test-coveralls
 deploy:
   provider: npm
   email: mariano.fernandez@gmail.com
