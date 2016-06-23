@@ -3,6 +3,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Travis Build][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
 
 A non-invasive, pure HTML templating framework.
 
@@ -10,7 +11,7 @@ This is the core framework underpinning [Temply Web](https://github.com/mefernan
 
 ## Why bother
 
-There are just so many templating frameworks out there, right? 
+There are just so many templating frameworks out there, right?
 
 So, why bother?
 
@@ -89,3 +90,5 @@ The idea is that preceding `cms-data` plugins pass along valuable `data` to subs
 [travis-url]: https://travis-ci.org/mefernandez/temply-core
 [downloads-image]: https://img.shields.io/npm/dm/temply-core.svg
 [downloads-url]: https://npmjs.org/package/temply-core
+[coveralls-image]: https://coveralls.io/repos/github/mefernandez/temply-core/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/mefernandez/temply-core?branch=master
