@@ -11,6 +11,34 @@ describe('The plugin engine', function() {
     flag: 'r'
   };
 
+  describe('given plain text content from template-01.html', function() {
+
+    var filePath = path.join(__dirname, 'template-01.html');
+    var html = fs.readFileSync(filePath, readFileOptions);
+    var pluginsRepository = [path.join(__dirname, 'plugins/dummy')];
+    var engine = engineFactory(pluginsRepository);
+
+    it('render should call the callback with no arguments if null model is passed along', function(done) {
+      engine.render(null, function() {
+        expect(arguments).to.have.length(0);
+        done();
+      });
+    });
+
+    it('should build a model with no plugins', function() {
+      var model = engine.build(html);
+      expect(model.plugins).to.have.length(0);
+    });
+
+    it('should render plain text', function(done) {
+      var model = engine.build(html);
+      engine.render(model, function(result) {
+        expect(result).to.equal("This is just some plain text content from template-01.html\n");
+        done();
+      });
+    });
+
+  });
   describe('should build an execution model from template-04.html', function() {
 
     var filePath = path.join(__dirname, 'template-04.html');
